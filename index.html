@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravElly | Reis & dagboek app voor kinderen | Gratis in de App Store</title>
+    <meta name="description" content="TravElly is het reisdagboek voor kinderen van 6 tot 14 jaar. Bouw samen de reis op, schrijf verhalen, maak foto's en deel je dag als ansichtkaart. Privacy-vriendelijk en gratis.">
+    <meta name="keywords" content="reisdagboek kinderen, vakantie app kinderen, reis app gezin, dagboek app kind, travel diary kids, reisdagboek app">
+    <link rel="canonical" href="https://mijn-travelly.nl/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="TravElly | Reis & dagboek app voor kinderen">
+    <meta property="og:description" content="De leukste manier voor kinderen van 6–14 om hun reisavonturen vast te leggen. Gratis in de App Store.">
+    <meta property="og:url" content="https://mijn-travelly.nl/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:image" content="https://mijn-travelly.nl/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TravElly | Reis & dagboek app voor kinderen">
+    <meta name="twitter:description" content="De leukste manier voor kinderen van 6–14 om hun reisavonturen vast te leggen.">
+
+    <!-- Apple Smart Banner -->
+    <meta name="apple-itunes-app" content="app-id=6760542416">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --green-dark: #1a2e1a;
+            --green-deep: #243524;
+            --green-mid: #3a5a3a;
+            --green-sage: #4a5d4a;
+            --green-light: #d6e4cc;
+            --green-soft: #e8ede4;
+            --green-pale: #f0f5ec;
+            --cream: #f7faf4;
+            --text: #1a2e1a;
+            --text-light: #4a5d4a;
+            --text-on-dark: #d6e4cc;
+            --white: #ffffff;
+            --radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: var(--text);
+            background: var(--cream);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ---- NAV ---- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(247, 250, 244, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 100;
+            border-bottom: 1px solid rgba(58, 90, 58, 0.1);
+        }
+        .nav-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 14px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--green-dark);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .nav-cta {
+            background: var(--green-dark);
+            color: var(--green-light);
+            padding: 8px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+        .nav-cta:hover { background: var(--green-deep); }
+
+        /* ---- HERO ---- */
+        .hero {
+            padding: 140px 24px 80px;
+            text-align: center;
+            background: linear-gradient(180deg, var(--green-soft) 0%, var(--cream) 100%);
+        }
+        .hero-badge {
+            display: inline-block;
+            background: var(--green-dark);
+            color: var(--green-light);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 24px;
+            margin-bottom: 24px;
+            letter-spacing: 0.3px;
+        }
+        .hero h1 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            line-height: 1.25;
+            color: var(--green-dark);
+            max-width: 640px;
+            margin: 0 auto 20px;
+        }
+        .hero-sub {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            max-width: 520px;
+            margin: 0 auto 36px;
+        }
+        .hero-cta {
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+        .hero-cta img {
+            height: 54px;
+        }
+        .hero-note {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* ---- SECTION SHARED ---- */
+        section {
+            padding: 80px 24px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--green-mid);
+            margin-bottom: 12px;
+        }
+        .section-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+            color: var(--green-dark);
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        /* ---- HOW IT WORKS ---- */
+        .how-it-works {
+            background: var(--white);
+        }
+        .how-intro {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            max-width: 640px;
+            margin-bottom: 48px;
+            line-height: 1.8;
+        }
+        .phases {
+            display: grid;
+            gap: 40px;
+        }
+        .phase {
+            display: grid;
+            grid-template-columns: 56px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+        .phase-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--green-soft);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .phase h3 {
+            font-size: 1.1rem;
+            color: var(--green-dark);
+            margin-bottom: 6px;
+        }
+        .phase p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* ---- FEATURES ---- */
+        .features {
+            background: var(--green-pale);
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+        .feature-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 32px 24px;
+            border: 1px solid rgba(58, 90, 58, 0.08);
+        }
+        .feature-emoji {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+        }
+        .feature-card h3 {
+            font-size: 1rem;
+            color: var(--green-dark);
+            margin-bottom: 8px;
+        }
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.65;
+        }
+
+        /* ---- DOELGROEP ---- */
+        .doelgroep {
+            background: var(--white);
+        }
+        .doelgroep-text {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            max-width: 640px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* ---- SCREENSHOTS ---- */
+        .screenshots {
+            background: var(--green-pale);
+            text-align: center;
+        }
+        .screenshot-scroll {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .screenshot-scroll img {
+            width: 220px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(26, 46, 26, 0.12);
+        }
+
+        /* ---- PRIVACY ---- */
+        .privacy {
+            background: var(--green-dark);
+            color: var(--text-on-dark);
+        }
+        .privacy .section-label {
+            color: var(--green-light);
+        }
+        .privacy .section-title {
+            color: var(--white);
+        }
+        .privacy-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            max-width: 640px;
+            opacity: 0.9;
+            margin-bottom: 32px;
+        }
+        .privacy-points {
+            display: grid;
+            gap: 16px;
+            max-width: 640px;
+        }
+        .privacy-point {
+            font-size: 0.95rem;
+            display: flex;
+            align-items: start;
+            gap: 12px;
+            line-height: 1.6;
+        }
+        .privacy-check {
+            color: var(--green-light);
+            font-weight: 700;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            line-height: 1.5;
+        }
+
+        /* ---- TOEGANKELIJKHEID ---- */
+        .toegankelijkheid {
+            background: var(--green-deep);
+            color: var(--text-on-dark);
+        }
+        .toegankelijkheid .section-label {
+            color: var(--green-light);
+        }
+        .toegankelijkheid .section-title {
+            color: var(--white);
+        }
+        .toegankelijkheid-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            max-width: 640px;
+            opacity: 0.9;
+        }
+
+        /* ---- FAQ ---- */
+        .faq {
+            background: var(--cream);
+        }
+        .faq-list {
+            margin-top: 32px;
+            display: grid;
+            gap: 20px;
+        }
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 24px 28px;
+            border: 1px solid rgba(58, 90, 58, 0.08);
+        }
+        .faq-item h3 {
+            font-size: 1rem;
+            color: var(--green-dark);
+            margin-bottom: 8px;
+        }
+        .faq-item p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* ---- CTA ---- */
+        .bottom-cta {
+            background: linear-gradient(180deg, var(--cream) 0%, var(--green-soft) 100%);
+            text-align: center;
+            padding: 80px 24px 100px;
+        }
+        .bottom-cta .section-title {
+            margin-bottom: 8px;
+        }
+        .bottom-cta-sub {
+            color: var(--text-light);
+            margin-bottom: 28px;
+            font-size: 1rem;
+        }
+        .bottom-cta-link {
+            display: inline-block;
+        }
+        .bottom-cta-link img {
+            height: 54px;
+        }
+
+        /* ---- FOOTER ---- */
+        footer {
+            background: var(--green-dark);
+            color: var(--text-on-dark);
+            text-align: center;
+            padding: 32px 24px;
+            font-size: 0.85rem;
+        }
+        footer a {
+            color: var(--text-on-dark);
+            text-decoration: underline;
+            text-decoration-color: rgba(214, 228, 204, 0.3);
+        }
+        footer a:hover {
+            text-decoration-color: var(--text-on-dark);
+        }
+        .footer-contact {
+            margin-top: 8px;
+        }
+
+        /* ---- RESPONSIVE ---- */
+        @media (max-width: 640px) {
+            .hero { padding: 120px 20px 60px; }
+            section { padding: 60px 20px; }
+            .phase { grid-template-columns: 1fr; }
+            .phase-icon { margin-bottom: -12px; }
+            .screenshot-scroll img { width: 180px; }
+        }
+    </style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "TravElly",
+        "operatingSystem": "iOS",
+        "applicationCategory": "TravelApplication",
+        "description": "TravElly is het reisdagboek voor kinderen van 6 tot 14 jaar. Bouw samen de reis op vóór vertrek en laat kinderen hun vakantie vastleggen met foto's en verhalen.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+        },
+        "url": "https://apps.apple.com/app/travelly/id6760542416"
+    }
+    </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">TravElly</a>
+        <a href="https://apps.apple.com/app/travelly/id6760542416" class="nav-cta">Download gratis</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <span class="hero-badge">🎉 Tijdelijk gratis in de App Store</span>
+        <h1>Het reisdagboek voor jonge reizigers</h1>
+        <p class="hero-sub">De leukste vakantie-app voor kinderen van 6 tot 14 jaar om hun reisavonturen vast te leggen.</p>
+        <a href="https://apps.apple.com/app/travelly/id6760542416" class="hero-cta">
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/nl-nl?size=250x83" alt="Download in de App Store">
+        </a>
+        <p class="hero-note">Geen reclame · Geen tracking · Geen account nodig</p>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works" id="hoe-werkt-het">
+    <div class="container">
+        <p class="section-label">Over TravElly</p>
+        <h2 class="section-title">Van voorbereiding tot herinnering</h2>
+        <p class="how-intro">TravElly heeft twee doelen. Vóór de vakantie laat de app kinderen zien waar de reis naartoe gaat en welke locaties worden aangedaan. Zo bouwen ze alvast spanning op en weten ze wat hen te wachten staat. Tijdens de vakantie maken kinderen hun eigen reisverhaal: foto's kiezen, schrijven wat ze hebben beleefd en hun dag delen met wie ze willen.</p>
+
+        <div class="phases">
+            <div class="phase">
+                <div class="phase-icon">🗺️</div>
+                <div>
+                    <h3>Vóór de reis: bouw samen het avontuur op</h3>
+                    <p>Vul de reisbestemming in, bekijk waar jullie slapen en hoe jullie reizen. Je kind ziet de reis al voor zich en telt af naar vertrek. Ideaal om samen achter de iPad of iPhone te doen.</p>
+                </div>
+            </div>
+            <div class="phase">
+                <div class="phase-icon">✍️</div>
+                <div>
+                    <h3>Tijdens de vakantie: het dagboek van je kind</h3>
+                    <p>Tijdens de vakantie vullen kinderen zelf hun dagboek: foto's kiezen, schrijven wat ze hebben beleefd en hun dag delen als ansichtkaart met opa, oma of vrienden.</p>
+                </div>
+            </div>
+            <div class="phase">
+                <div class="phase-icon">💌</div>
+                <div>
+                    <h3>Deel het als ansichtkaart</h3>
+                    <p>Met één tik maak je van een dagboekpagina een digitale ansichtkaart. Deel 'm via WhatsApp, iMessage of mail. Opa en oma worden blij en je kind voelt zich trots.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="functies">
+    <div class="container">
+        <p class="section-label">Wat zit erin</p>
+        <h2 class="section-title">Alles wat een jong reiziger nodig heeft</h2>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-emoji">📸</div>
+                <h3>Foto's per dag</h3>
+                <p>Kies de mooiste foto's van de dag en voeg ze toe aan het dagboek. Zo bouw je een persoonlijk fotoalbum op van de hele reis.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-emoji">📝</div>
+                <h3>Schrijven en vertellen</h3>
+                <p>Wat was het leukste vandaag? Kinderen schrijven in hun eigen woorden over hun belevenissen, van stranddag tot stadsavontuur.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-emoji">🏨</div>
+                <h3>Sfeervolle illustraties</h3>
+                <p>Kies een eigen foto of een sfeervolle illustratie voor je verblijfplaats: strand, hotel, camping en meer.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-emoji">🌙</div>
+                <h3>Donkere modus</h3>
+                <p>TravElly schakelt automatisch mee met de donkere modus van je iPhone. Rustig voor de ogen, prettig bij minder fel licht.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DOELGROEP -->
+<section class="doelgroep" id="doelgroep">
+    <div class="container">
+        <p class="section-label">Doelgroep</p>
+        <h2 class="section-title">Gemaakt voor kids met input van kids</h2>
+        <p class="doelgroep-text" style="font-weight: 600; color: var(--green-mid);">Een app waarin ouders en kinderen samenwerken.</p>
+        <p class="doelgroep-text">TravElly is ontworpen voor kinderen van 6 tot 14 jaar. Ouders kunnen de reis aanmaken en zo hun kinderen een beeld geven van de vakantie. Kinderen vullen vervolgens zelf hun dagboek met foto's en verhalen.</p>
+        <p class="doelgroep-text">De app kan op de telefoon van een ouder worden geïnstalleerd, zodat kinderen deze samen of onder begeleiding kunnen gebruiken. Dit past goed bij gezinnen die kiezen voor beperkt of gecontroleerd smartphonegebruik. Natuurlijk kan TravElly ook rechtstreeks op de telefoon van je kind worden gezet. Welke aanpak het beste past, bepaal je als ouder zelf.</p>
+    </div>
+</section>
+
+<!-- SCREENSHOTS -->
+<section class="screenshots" id="screenshots">
+    <div class="container">
+        <p class="section-label">Zo ziet het eruit</p>
+        <h2 class="section-title">Een dagboek waar je kind trots op is</h2>
+        <div class="screenshot-scroll">
+            <img src="https://mijn-travelly.nl/screenshot1.png" alt="TravElly ansichtkaart functie, deel je dag met familie" loading="lazy">
+            <img src="https://mijn-travelly.nl/screenshot2.png" alt="TravElly dagoverzicht met foto's en dagboek" loading="lazy">
+            <img src="https://mijn-travelly.nl/screenshot3.png" alt="TravElly activiteit toevoegen aan je reisdagboek" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- PRIVACY -->
+<section class="privacy" id="privacy">
+    <div class="container">
+        <p class="section-label">Privacy</p>
+        <h2 class="section-title">Jouw reis, jouw gegevens</h2>
+        <p class="privacy-text">TravElly respecteert je privacy volledig. Er is geen account nodig, er draait geen analytics en er staat geen reclame in de app.</p>
+        <div class="privacy-points">
+            <div class="privacy-point">
+                <span class="privacy-check">✓</span>
+                <p>Alle gegevens blijven op jouw apparaat</p>
+            </div>
+            <div class="privacy-point">
+                <span class="privacy-check">✓</span>
+                <p>Er wordt niets gedeeld met de ontwikkelaar of met derden</p>
+            </div>
+            <div class="privacy-point">
+                <span class="privacy-check">✓</span>
+                <p>Er is geen account nodig en er wordt niets opgeslagen in de cloud</p>
+            </div>
+            <div class="privacy-point">
+                <span class="privacy-check">✓</span>
+                <p>Alleen wanneer je zelf de deelknop gebruikt, verlaat informatie het apparaat. Jij kiest waarmee en met wie</p>
+            </div>
+            <div class="privacy-point">
+                <span class="privacy-check">✓</span>
+                <p>TravElly bevat geen advertenties en geen tracking</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TOEGANKELIJKHEID -->
+<section class="toegankelijkheid">
+    <div class="container">
+        <p class="section-label">Toegankelijkheid</p>
+        <h2 class="section-title">Prettig voor iedereen</h2>
+        <p class="toegankelijkheid-text">TravElly schakelt automatisch mee met de donkere modus instelling van je iPhone. De donkere modus is speciaal ontwikkeld voor mensen met lichtgevoeligheid of niet-aangeboren hersenletsel. Het rustige, donkere kleurenschema vermindert visuele belasting en maakt de app prettiger in gebruik voor iedereen die baat heeft bij minder fel licht.</p>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="veelgestelde-vragen">
+    <div class="container">
+        <p class="section-label">Veelgestelde vragen</p>
+        <h2 class="section-title">Goed om te weten</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h3>Voor welke leeftijd is TravElly?</h3>
+                <p>TravElly is gemaakt voor kinderen van 6 tot 14 jaar. Jong genoeg om het leuk te vinden, oud genoeg om zelf te schrijven en foto's te kiezen. Jongere kinderen kunnen het prima samen met een ouder gebruiken.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Werkt de app zonder internet?</h3>
+                <p>Ja. Alles werkt offline, perfect voor de vakantie. Alleen als je een ansichtkaart wilt delen heb je even verbinding nodig.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Kost het iets?</h3>
+                <p>TravElly is nu tijdelijk gratis. Na de introductieperiode wordt het € 0,99. Een eenmalige aankoop, geen abonnement.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Kan ik meerdere reizen bijhouden?</h3>
+                <p>Ja, je kunt meerdere reizen aanmaken. Elk avontuur krijgt zijn eigen dagboek.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Moet mijn kind een eigen telefoon hebben?</h3>
+                <p>Nee. De app kan op de telefoon van een ouder worden geïnstalleerd, zodat kinderen deze samen of onder begeleiding kunnen gebruiken. Natuurlijk kan TravElly ook rechtstreeks op de telefoon van je kind worden gezet.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is er een Android-versie?</h3>
+                <p>Op dit moment is TravElly alleen beschikbaar voor iPhone en iPad. Een Android-versie staat op de wensenlijst.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="bottom-cta" id="download">
+    <div class="container">
+        <h2 class="section-title">Klaar voor het volgende avontuur?</h2>
+        <p class="bottom-cta-sub">Download TravElly gratis en begin met de voorbereiding van jullie reis.</p>
+        <a href="https://apps.apple.com/app/travelly/id6760542416" class="bottom-cta-link">
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/nl-nl?size=250x83" alt="Download in de App Store">
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 TravElly | Gemaakt met input van kids, voor kids</p>
+    <p class="footer-contact">Vragen of suggesties? <a href="mailto:info@mijn-travelly.nl">info@mijn-travelly.nl</a></p>
+    <p style="margin-top: 8px;"><a href="https://mijn-travelly.nl/privacy/">Privacybeleid</a></p>
+</footer>
+
+</body>
+</html>
