@@ -101,7 +101,7 @@
 
         /* ---- HERO ---- */
         .hero {
-            padding: 140px 24px 80px;
+            padding: 140px 24px 40px;
             text-align: center;
             background: linear-gradient(180deg, var(--green-soft) 0%, var(--cream) 100%);
         }
@@ -164,6 +164,25 @@
             color: var(--green-dark);
             line-height: 1.3;
             margin-bottom: 20px;
+        }
+
+        /* ---- SCREENSHOTS (direct under hero) ---- */
+        .screenshots {
+            background: var(--cream);
+            text-align: center;
+            padding: 0 24px 80px;
+        }
+        .screenshot-scroll {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 0;
+        }
+        .screenshot-scroll img {
+            width: 220px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(26, 46, 26, 0.12);
         }
 
         /* ---- HOW IT WORKS ---- */
@@ -250,24 +269,6 @@
             max-width: 640px;
             line-height: 1.8;
             margin-bottom: 20px;
-        }
-
-        /* ---- SCREENSHOTS ---- */
-        .screenshots {
-            background: var(--green-pale);
-            text-align: center;
-        }
-        .screenshot-scroll {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-        .screenshot-scroll img {
-            width: 220px;
-            border-radius: 20px;
-            box-shadow: 0 8px 32px rgba(26, 46, 26, 0.12);
         }
 
         /* ---- PRIVACY ---- */
@@ -395,8 +396,9 @@
 
         /* ---- RESPONSIVE ---- */
         @media (max-width: 640px) {
-            .hero { padding: 120px 20px 60px; }
+            .hero { padding: 120px 20px 30px; }
             section { padding: 60px 20px; }
+            .screenshots { padding: 0 20px 60px; }
             .phase { grid-template-columns: 1fr; }
             .phase-icon { margin-bottom: -12px; }
             .screenshot-scroll img { width: 180px; }
@@ -435,11 +437,21 @@
 <section class="hero">
     <div class="container">
         <h1>De eerste vakantie die je kind zelf vastlegt</h1>
-       <p class="hero-sub">Eerst de reis dag voor dag in beeld. Daarna twee foto's en een kort tekstje per dag.</p>
+        <p class="hero-sub">Bewust gebouwd zonder social media, zonder likes, zonder druk. Je kind ziet vooraf waar de reis naartoe gaat en wat hem te wachten staat. En als de vakantie begint, maakt het met plezier zijn eigen reisverhaal.</p>
         <p class="hero-note">Geen reclame · Geen tracking · Geen account nodig</p>
     </div>
 </section>
 
+<!-- SCREENSHOTS (direct onder hero) -->
+<section class="screenshots" id="screenshots">
+    <div class="container">
+        <div class="screenshot-scroll">
+            <img src="https://mijn-travelly.nl/screenshot5.png" alt="TravElly reisoverzicht met locaties en sfeervolle illustraties" loading="lazy">
+            <img src="https://mijn-travelly.nl/screenshot4.PNG" alt="TravElly dagoverzicht met sfeervolle illustraties en dagboek" loading="lazy">
+            <img src="https://mijn-travelly.nl/screenshot1.png" alt="TravElly ansichtkaart functie, deel je dag met familie" loading="lazy">
+        </div>
+    </div>
+</section>
 
 <!-- HOW IT WORKS -->
 <section class="how-it-works" id="hoe-werkt-het">
@@ -454,6 +466,13 @@
                 <div>
                     <h3>Vóór de reis: bouw samen het avontuur op</h3>
                     <p>Vul de reisbestemming in, bekijk waar jullie slapen en hoe jullie reizen. Je kind ziet de reis al voor zich en telt af naar vertrek. Ideaal om samen achter de iPad of iPhone te doen.</p>
+                </div>
+            </div>
+            <div class="phase">
+                <div class="phase-icon">📤</div>
+                <div>
+                    <h3>Deel de reis met het hele gezin</h3>
+                    <p>Heb je de reis klaar? Deel hem met één tik naar iedereen met een iPhone. Zij openen het bestand en hebben meteen dezelfde reis in hun eigen TravElly-app, klaar om hun eigen dagboek bij te houden.</p>
                 </div>
             </div>
             <div class="phase">
@@ -516,21 +535,6 @@
     </div>
 </section>
 
-<!-- SCREENSHOTS -->
-<section class="screenshots" id="screenshots">
-    <div class="container">
-        <p class="section-label">Zo ziet het eruit</p>
-        <h2 class="section-title">Een dagboek waar je kind trots op is</h2>
-            <div class="screenshot-scroll">
-            <img src="https://mijn-travelly.nl/screenshot3.png" alt="TravElly: bouw samen de reis op met bestemming en route" loading="lazy">
-            <img src="https://mijn-travelly.nl/screenshot4.PNG" alt="TravElly dagoverzicht met sfeervolle illustraties en dagboek" loading="lazy">
-            <img src="https://mijn-travelly.nl/screenshot2.png" alt="TravElly dagoverzicht met foto's en dagboek" loading="lazy">
-            <img src="https://mijn-travelly.nl/screenshot1.png" alt="TravElly ansichtkaart functie, deel je dag met familie" loading="lazy">
-        </div>
-
-    </div>
-</section>
-
 <!-- PRIVACY -->
 <section class="privacy" id="privacy">
     <div class="container">
@@ -588,6 +592,10 @@
             <div class="faq-item">
                 <h3>Kost het iets?</h3>
                 <p>TravElly is nu tijdelijk gratis. Na de introductieperiode wordt het € 0,99. Een eenmalige aankoop, geen abonnement.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Kan ik de reis delen met mijn gezin?</h3>
+                <p>Ja! Zodra je de reis hebt aangemaakt, deel je hem via WhatsApp, AirDrop of iMessage. Iedereen met een iPhone en TravElly ontvangt dezelfde reis en kan zijn eigen dagboek bijhouden.</p>
             </div>
             <div class="faq-item">
                 <h3>Kan ik meerdere reizen bijhouden?</h3>
