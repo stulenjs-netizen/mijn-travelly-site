@@ -8,12 +8,18 @@
     <meta name="keywords" content="reisdagboek kinderen, vakantie app kinderen, reis app gezin, dagboek app kind, travel diary kids, reisdagboek app">
     <link rel="canonical" href="https://mijn-travelly.nl/">
 
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="nl" href="https://mijn-travelly.nl/">
+    <link rel="alternate" hreflang="en" href="https://mijn-travelly.nl/en/">
+    <link rel="alternate" hreflang="x-default" href="https://mijn-travelly.nl/">
+
     <!-- Open Graph -->
     <meta property="og:title" content="TravElly | Reis & dagboek app voor kinderen">
     <meta property="og:description" content="De leukste manier voor kinderen van 6–14 om hun reisavonturen vast te leggen. Gratis in de App Store.">
     <meta property="og:url" content="https://mijn-travelly.nl/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="nl_NL">
+    <meta property="og:locale:alternate" content="en_US">
     <meta property="og:image" content="https://mijn-travelly.nl/og-image.png">
 
     <!-- Twitter Card -->
@@ -87,6 +93,28 @@
             text-decoration: none;
             letter-spacing: -0.5px;
         }
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .lang-switch {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-light);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .lang-switch a {
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 4px 4px;
+            transition: color 0.2s;
+        }
+        .lang-switch a:hover { color: var(--green-dark); }
+        .lang-switch a.lang-active { color: var(--green-dark); }
+        .lang-sep { opacity: 0.4; }
         .nav-cta {
             background: var(--green-dark);
             color: var(--green-light);
@@ -459,6 +487,8 @@
             .phase { grid-template-columns: 1fr; }
             .phase-icon { margin-bottom: -12px; }
             .screenshot-scroll img { width: 180px; }
+            .nav-right { gap: 10px; }
+            .nav-cta { padding: 8px 14px; font-size: 0.8rem; }
         }
     </style>
 
@@ -471,10 +501,15 @@
         "operatingSystem": "iOS",
         "applicationCategory": "TravelApplication",
         "description": "TravElly is het reisdagboek voor kinderen van 6 tot 14 jaar. Bouw samen de reis op vóór vertrek en laat kinderen hun vakantie vastleggen met foto's en verhalen.",
+        "inLanguage": "nl",
         "offers": {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "EUR"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Jeroen"
         },
         "url": "https://apps.apple.com/app/travelly/id6760542416"
     }
@@ -486,7 +521,12 @@
 <nav>
     <div class="nav-inner">
         <a href="/" class="nav-logo">TravElly</a>
-        <a href="https://apps.apple.com/app/travelly/id6760542416" class="nav-cta">Download gratis</a>
+        <div class="nav-right">
+            <span class="lang-switch" aria-label="Taal">
+                <a href="/" class="lang-active" hreflang="nl" aria-current="page">NL</a><span class="lang-sep">·</span><a href="/en/" hreflang="en">EN</a>
+            </span>
+            <a href="https://apps.apple.com/app/travelly/id6760542416" class="nav-cta">Download gratis</a>
+        </div>
     </div>
 </nav>
 
@@ -728,7 +768,7 @@
 <footer>
     <p>© 2026 TravElly | Gemaakt met input van kids, voor kids</p>
     <p class="footer-contact">Vragen of suggesties? <a href="mailto:info@mijn-travelly.nl">info@mijn-travelly.nl</a></p>
-    <p style="margin-top: 8px;"><a href="https://mijn-travelly.nl/privacy/">Privacybeleid</a></p>
+    <p style="margin-top: 8px;"><a href="https://mijn-travelly.nl/privacy/">Privacybeleid</a> · <a href="/en/">English version</a></p>
 </footer>
 
 </body>
