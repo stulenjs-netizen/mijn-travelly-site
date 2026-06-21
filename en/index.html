@@ -805,9 +805,26 @@
 <!-- FOOTER -->
 <footer>
     <p>© 2026 TravElly · Built with input from kids, for kids</p>
-    <p class="footer-contact">Questions or suggestions? <a href="mailto:info@mijn-travelly.nl">info@mijn-travelly.nl</a></p>
+   <p class="footer-contact">Questions or suggestions? <a href="#" id="contact-mail" data-u="aW5mbw==" data-d="bWlqbi10cmF2ZWxseS5ubA==">Show email address</a></p>
     <p style="margin-top: 8px;"><a href="https://mijn-travelly.nl/privacy/">Privacy policy</a> (Dutch) · <a href="/">Nederlandse versie</a></p>
 </footer>
-
+<script>
+      (function () {
+        var link = document.getElementById('contact-mail');
+        if (!link) return;
+        var revealed = false;
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          var addr = atob(link.dataset.u) + String.fromCharCode(64) + atob(link.dataset.d);
+          if (!revealed) {
+            link.textContent = addr;
+            link.href = 'mailto:' + addr;
+            revealed = true;
+          } else {
+            window.location.href = 'mailto:' + addr;
+          }
+        });
+      })();
+    </script>
 </body>
 </html>
