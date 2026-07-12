@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TravElly | Reis & dagboek app voor kinderen | Gratis in de App Store</title>
-    <meta name="description" content="TravElly is het reisdagboek voor kinderen van 6 tot 14 jaar. Bouw samen de reis op, schrijf verhalen, maak foto's en deel je dag als ansichtkaart. Privacy-vriendelijk en gratis.">
-    <meta name="keywords" content="reisdagboek kinderen, vakantie app kinderen, reis app gezin, dagboek app kind, travel diary kids, reisdagboek app">
+    <title>TravElly | Reisapp voor gezinnen: je kind plant mee | Gratis in de App Store</title>
+    <meta name="description" content="TravElly is de reisapp waarin je kind meeplant. Overzicht van de reis, zelf activiteiten toevoegen en onderweg een reisdagboek voor kinderen van 6 tot 14 jaar. Offline, zonder account, gratis.">
+    <meta name="keywords" content="kinder reisplanner app, reisapp gezin, samen reis plannen met kind, reisoverzicht kinderen, reisdagboek voor kinderen, vakantiedagboek kind, reisverslag kind">
     <link rel="canonical" href="https://mijn-travelly.nl/">
 
     <!-- hreflang -->
@@ -14,8 +14,8 @@
     <link rel="alternate" hreflang="x-default" href="https://mijn-travelly.nl/">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="TravElly | Reis & dagboek app voor kinderen">
-    <meta property="og:description" content="De leukste manier voor kinderen van 6–14 om hun reisavonturen vast te leggen. Gratis in de App Store.">
+    <meta property="og:title" content="TravElly | Reisapp voor gezinnen: je kind plant mee">
+    <meta property="og:description" content="De reisapp voor gezinnen met kinderen van 6 tot 14 jaar. Je kind overziet de reis, plant activiteiten mee en houdt onderweg een dagboek bij. Gratis in de App Store.">
     <meta property="og:url" content="https://mijn-travelly.nl/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="nl_NL">
@@ -24,8 +24,8 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TravElly | Reis & dagboek app voor kinderen">
-    <meta name="twitter:description" content="De leukste manier voor kinderen van 6–14 om hun reisavonturen vast te leggen.">
+    <meta name="twitter:title" content="TravElly | Reisapp voor gezinnen: je kind plant mee">
+    <meta name="twitter:description" content="De reisapp voor gezinnen met kinderen van 6 tot 14 jaar. Je kind overziet de reis, plant activiteiten mee en houdt onderweg een dagboek bij.">
 
     <!-- Apple Smart Banner -->
   <meta name="msvalidate.01" content="56E00B2986D6CA2BCD81144929BC2721" />
@@ -129,34 +129,23 @@
 
         /* ---- HERO ---- */
         .hero {
-            padding: 140px 24px 40px;
+            padding: 120px 24px 60px;
             text-align: center;
             background: linear-gradient(180deg, var(--green-soft) 0%, var(--cream) 100%);
         }
-        .hero-badge {
-            display: inline-block;
-            background: var(--green-dark);
-            color: var(--green-light);
-            font-size: 0.8rem;
-            font-weight: 700;
-            padding: 6px 16px;
-            border-radius: 24px;
-            margin-bottom: 24px;
-            letter-spacing: 0.3px;
-        }
         .hero h1 {
             font-family: 'Libre Baskerville', serif;
-            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-size: clamp(1.8rem, 4.5vw, 2.8rem);
             line-height: 1.25;
             color: var(--green-dark);
-            max-width: 640px;
+            max-width: 680px;
             margin: 0 auto 20px;
         }
         .hero-sub {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             color: var(--text-light);
-            max-width: 520px;
-            margin: 0 auto 36px;
+            max-width: 560px;
+            margin: 0 auto 28px;
         }
         .hero-cta {
             display: inline-block;
@@ -168,6 +157,15 @@
         .hero-note {
             font-size: 0.85rem;
             color: var(--text-light);
+        }
+        .hero-shot {
+            margin-top: 40px;
+        }
+        .hero-shot img {
+            width: 240px;
+            max-width: 70vw;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(26, 46, 26, 0.12);
         }
 
         /* ---- HERO LABEL ---- */
@@ -183,48 +181,17 @@
         /* ---- SEO INTRO ---- */
         .seo-intro {
             background: var(--cream);
-            padding: 0 24px 40px;
-            text-align: center;
+            padding: 40px 24px;
         }
         .seo-text {
             font-size: 1rem;
             color: var(--text-light);
             max-width: 640px;
-            margin: 0 auto;
+            margin: 0 auto 16px;
             line-height: 1.8;
         }
-
-        /* ---- WAAROM OUDERS ---- */
-        .waarom {
-            background: var(--green-pale);
-        }
-        .waarom-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 24px;
-            margin-top: 32px;
-        }
-        .waarom-item {
-            display: flex;
-            align-items: start;
-            gap: 12px;
-        }
-        .waarom-icon {
-            font-size: 1.4rem;
-            flex-shrink: 0;
-            line-height: 1.5;
-        }
-        .waarom-intro {
-            font-size: 1.05rem;
-            color: var(--text-light);
-            max-width: 640px;
-            line-height: 1.8;
-            margin-bottom: 12px;
-        }
-        .waarom-item p {
-            font-size: 0.95rem;
-            color: var(--text-light);
-            line-height: 1.6;
+        .seo-text:last-child {
+            margin-bottom: 0;
         }
 
         /* ---- SECTION SHARED ---- */
@@ -251,28 +218,31 @@
             margin-bottom: 20px;
         }
 
-        /* ---- SCREENSHOTS (direct under hero) ---- */
-        .screenshots {
-            background: var(--cream);
-            text-align: center;
-            padding: 0 24px 80px;
+        /* ---- PIJLERS ---- */
+        .pijler-white { background: var(--white); }
+        .pijler-pale { background: var(--green-pale); }
+        .pijler-text {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            max-width: 640px;
+            line-height: 1.8;
+            margin-bottom: 16px;
         }
-        .screenshot-scroll {
+        .pijler-shots {
             display: flex;
             gap: 20px;
-            justify-content: center;
             flex-wrap: wrap;
-            margin-top: 0;
+            margin-top: 32px;
         }
-        .screenshot-scroll img {
-            width: 220px;
+        .pijler-shots img {
+            width: 200px;
             border-radius: 20px;
             box-shadow: 0 8px 32px rgba(26, 46, 26, 0.12);
         }
 
-        /* ---- HOW IT WORKS ---- */
+        /* ---- ZO WERKT HET IN HET GEZIN ---- */
         .how-it-works {
-            background: var(--white);
+            background: var(--green-pale);
         }
         .how-intro {
             font-size: 1.05rem;
@@ -311,37 +281,6 @@
             color: var(--text-light);
             font-size: 0.95rem;
             line-height: 1.7;
-        }
-
-        /* ---- FEATURES ---- */
-        .features {
-            background: var(--green-pale);
-        }
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 32px;
-            margin-top: 40px;
-        }
-        .feature-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 32px 24px;
-            border: 1px solid rgba(58, 90, 58, 0.08);
-        }
-        .feature-emoji {
-            font-size: 1.8rem;
-            margin-bottom: 16px;
-        }
-        .feature-card h3 {
-            font-size: 1rem;
-            color: var(--green-dark);
-            margin-bottom: 8px;
-        }
-        .feature-card p {
-            color: var(--text-light);
-            font-size: 0.9rem;
-            line-height: 1.65;
         }
 
         /* ---- DOELGROEP ---- */
@@ -481,12 +420,13 @@
 
         /* ---- RESPONSIVE ---- */
         @media (max-width: 640px) {
-            .hero { padding: 120px 20px 30px; }
+            .hero { padding: 100px 20px 40px; }
             section { padding: 60px 20px; }
-            .screenshots { padding: 0 20px 60px; }
+            .hero h1 { font-size: 1.6rem; }
+            .hero-shot img { width: 190px; }
             .phase { grid-template-columns: 1fr; }
             .phase-icon { margin-bottom: -12px; }
-            .screenshot-scroll img { width: 180px; }
+            .pijler-shots img { width: 160px; }
             .nav-right { gap: 10px; }
             .nav-cta { padding: 8px 14px; font-size: 0.8rem; }
         }
@@ -496,12 +436,17 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "MobileApplication",
+        "@type": "SoftwareApplication",
         "name": "TravElly",
         "operatingSystem": "iOS",
         "applicationCategory": "TravelApplication",
-        "description": "TravElly is het reisdagboek voor kinderen van 6 tot 14 jaar. Bouw samen de reis op vóór vertrek en laat kinderen hun vakantie vastleggen met foto's en verhalen.",
+        "description": "TravElly is een reisapp voor gezinnen met kinderen van 6 tot 14 jaar. Kinderen zien het reisoverzicht met bestemmingen en datums, voegen zelf activiteiten toe en houden onderweg een reisdagboek bij met foto's en verhalen. Werkt offline, zonder account.",
         "inLanguage": "nl",
+        "audience": {
+            "@type": "PeopleAudience",
+            "suggestedMinAge": 6,
+            "suggestedMaxAge": 14
+        },
         "offers": {
             "@type": "Offer",
             "price": "0",
@@ -533,20 +478,15 @@
 <!-- HERO -->
 <section class="hero">
     <div class="container">
-        <p class="hero-label">Reisdagboek app voor kinderen</p>
-        <h1>De eerste vakantie die je kind zelf vastlegt</h1>
-        <p class="hero-sub">Met TravElly zit je goed, een app gericht op het maken van plezier en herinneringen. Zonder sociale druk, likes of accounts.</p>
-        <p class="hero-note">Geen reclame · Geen tracking · Geen account nodig</p>
-    </div>
-</section>
-
-<!-- SCREENSHOTS (direct onder hero) -->
-<section class="screenshots" id="screenshots">
-    <div class="container">
-        <div class="screenshot-scroll">
-            <img src="https://mijn-travelly.nl/screenshot5.png" alt="TravElly reisdagboek app: reisoverzicht met locaties en illustraties" loading="lazy">
-            <img src="https://mijn-travelly.nl/screenshot4.PNG" alt="TravElly vakantiedagboek: dagoverzicht met foto's en dagboektekst" loading="lazy">
-            <img src="https://mijn-travelly.nl/screenshot1.png" alt="TravElly kinder reisapp: deel je vakantiedag als ansichtkaart" loading="lazy">
+        <p class="hero-label">De reisapp waarin je kind meeplant</p>
+        <h1>De hele reis, gezien vanuit je kind. Van voorpret tot terugblik.</h1>
+        <p class="hero-sub">Voor gezinnen met kinderen van 6 tot 14 jaar. Je kind overziet de reis, plant zelf activiteiten mee en houdt onderweg foto's en een dagboek bij. Werkt offline, zonder account.</p>
+        <a href="https://apps.apple.com/app/travelly/id6760542416" class="hero-cta">
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/nl-nl?size=250x83" alt="Download TravElly in de App Store">
+        </a>
+        <p class="hero-note">Gratis · Geen reclame · Geen tracking · Geen account nodig</p>
+        <div class="hero-shot">
+            <img src="https://mijn-travelly.nl/screenshot5.png" alt="Het reisoverzicht in TravElly: bestemmingen, datums en route van de gezinsreis" fetchpriority="high">
         </div>
     </div>
 </section>
@@ -554,124 +494,83 @@
 <!-- SEO TEKSTBLOK -->
 <section class="seo-intro">
     <div class="container">
-        <p class="seo-text">TravElly is een reisdagboek app voor kinderen en gezinnen. Kinderen kunnen tijdens de vakantie foto's, verhalen en herinneringen bewaren — zonder sociale media, advertenties of accounts. De ideale vakantie app voor kinderen van 6 tot 14 jaar.</p>
+        <p class="seo-text">Je plant een reis en je kind vraagt vanaf de achterbank of we er al bijna zijn. TravElly draait dat om.</p>
+        <p class="seo-text">In plaats van meegenomen te worden, weet je kind waar het heen gaat. Het ziet dat jullie eerst vier dagen bij het strandhuis zitten en daarna de bergen in gaan, en het kan zelf uitzoeken wat daar te doen is. Wat het vindt, zet het in de reis. Zo begint de vakantie niet bij vertrek, maar weken eerder aan de keukentafel.</p>
+        <p class="seo-text">Onderweg schrijft en fotografeert je kind zelf. Aan het eind van de reis heb jij niet alleen kiekjes op je telefoon, maar heeft je kind een eigen verslag van iets waar het aan meegebouwd heeft.</p>
     </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="how-it-works" id="hoe-werkt-het">
+<!-- PIJLER 1: OVERZICHT -->
+<section class="pijler-white" id="reisoverzicht">
     <div class="container">
-        <p class="section-label">Over TravElly</p>
-        <h2 class="section-title">Van voorbereiding tot herinnering</h2>
-        <p class="how-intro">TravElly heeft twee doelen. Vóór de vakantie laat de app kinderen zien waar de reis naartoe gaat en welke locaties worden aangedaan. Zo bouwen ze alvast spanning op en weten ze wat hen te wachten staat. Tijdens de vakantie maken kinderen hun eigen reisverhaal: foto's kiezen, schrijven wat ze hebben beleefd en hun dag delen met wie ze willen.</p>
+        <p class="section-label">Overzicht</p>
+        <h2 class="section-title">Overzicht van de reis: bestemmingen, datums en route</h2>
+        <p class="pijler-text">De reis staat in TravElly op één rij: waar jullie heen gaan, in welke volgorde, op welke datums en hoe lang jullie er blijven. Zo wordt de reis concreet voordat hij begint.</p>
+        <p class="pijler-text">Voor je kind is het overzicht het antwoord op de vraag waar we heen gaan. Voor jou en je partner is het het gedeelde reisplan, op ieders eigen telefoon.</p>
+    </div>
+</section>
+
+<!-- PIJLER 2: MEEPLANNEN -->
+<section class="pijler-pale" id="meeplannen">
+    <div class="container">
+        <p class="section-label">Meeplannen</p>
+        <h2 class="section-title">Je kind plant mee: zelf activiteiten opzoeken en toevoegen</h2>
+        <p class="pijler-text">Je kind ziet de bestemmingen en zoekt zelf uit wat daar te doen is. Een grot, een waterval, een nachtmarkt. Wat het vindt, zet het zelf bij de juiste bestemming in de app.</p>
+        <p class="pijler-text">Zo verandert een passagier in een medeplanner. Je kind denkt mee over de invulling van de reis in plaats van hem te ondergaan, en de voorpret begint weken voor vertrek.</p>
+    </div>
+</section>
+
+<!-- PIJLER 3: VASTLEGGEN -->
+<section class="pijler-white" id="dagboek">
+    <div class="container">
+        <p class="section-label">Vastleggen</p>
+        <h2 class="section-title">Onderweg: foto's, dagboek en delen</h2>
+        <p class="pijler-text">Tijdens de reis legt je kind vast wat het meemaakt. TravElly bevat een reisdagboek voor kinderen van 6 tot 14 jaar: foto's van de dag kiezen en in eigen woorden opschrijven wat er gebeurde.</p>
+        <p class="pijler-text">Van elke dagboekpagina maak je met één tik een digitale ansichtkaart. Die deel je via WhatsApp, iMessage of mail met opa, oma of vrienden. Delen gaat rechtstreeks naar mensen die je zelf kiest, niet naar een platform.</p>
+        <div class="pijler-shots">
+            <img src="https://mijn-travelly.nl/screenshot4.PNG" alt="Het reisdagboek in TravElly: dagoverzicht met foto's en dagboektekst" loading="lazy">
+            <img src="https://mijn-travelly.nl/screenshot1.png" alt="Een vakantiedag delen als ansichtkaart vanuit TravElly" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- ZO WERKT HET IN HET GEZIN -->
+<section class="how-it-works" id="zo-werkt-het">
+    <div class="container">
+        <p class="section-label">In de praktijk</p>
+        <h2 class="section-title">Zo gebruikt een gezin TravElly</h2>
+        <p class="how-intro">Dit patroon zagen we bij een gezin dat een rondreis door Maleisië plande. De ouder zette de route in de app, het kind zocht bij elke stop op wat er te doen was en vulde het plan aan. Onderweg hield het kind het dagboek bij.</p>
 
         <div class="phases">
             <div class="phase">
                 <div class="phase-icon">🗺️</div>
                 <div>
-                    <h3>Vóór de reis: bouw samen het avontuur op</h3>
-                    <p>Vul de reisbestemming in, bekijk waar jullie slapen en hoe jullie reizen. Je kind ziet de reis al voor zich en telt af naar vertrek. Ideaal om samen achter de iPad of iPhone te doen.</p>
+                    <h3>Eén ouder zet de reis op</h3>
+                    <p>Bestemmingen, datums en verblijven gaan in de app. Dat is in een avond gedaan.</p>
                 </div>
             </div>
             <div class="phase">
                 <div class="phase-icon">📤</div>
                 <div>
-                    <h3>Deel de reis met het hele gezin</h3>
-                    <p>Heb je de reis klaar? Deel hem met één tik naar iedereen met een iPhone. Zij openen het bestand en hebben meteen dezelfde reis in hun eigen TravElly-app, klaar om hun eigen dagboek bij te houden.</p>
+                    <h3>De reis gaat naar de rest van het gezin</h3>
+                    <p>Deel de reis met één tik via WhatsApp, AirDrop of iMessage. Je partner en je kind openen hem in hun eigen TravElly en hebben hetzelfde overzicht.</p>
+                </div>
+            </div>
+            <div class="phase">
+                <div class="phase-icon">🔎</div>
+                <div>
+                    <h3>Je kind voegt activiteiten toe</h3>
+                    <p>Je kind ziet waar het gezin heen gaat, zoekt op wat daar te doen is en zet het bij de bestemmingen. De reis wordt ook zijn reis.</p>
                 </div>
             </div>
             <div class="phase">
                 <div class="phase-icon">✍️</div>
                 <div>
-                    <h3>Tijdens de vakantie: het dagboek van je kind</h3>
-                    <p>Tijdens de vakantie vullen kinderen zelf hun dagboek: foto's kiezen, schrijven wat ze hebben beleefd en hun dag delen als ansichtkaart met opa, oma of vrienden.</p>
-                </div>
-            </div>
-            <div class="phase">
-                <div class="phase-icon">💌</div>
-                <div>
-                    <h3>Deel het als ansichtkaart</h3>
-                    <p>Met één tik maak je van een dagboekpagina een digitale ansichtkaart. Deel 'm via WhatsApp, iMessage of mail. Opa en oma worden blij en je kind voelt zich trots.</p>
+                    <h3>Onderweg houdt je kind het dagboek bij</h3>
+                    <p>Foto's kiezen, schrijven wat er gebeurde en de dag als ansichtkaart delen met opa, oma of vrienden.</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- WAAROM OUDERS KIEZEN -->
-<section class="waarom" id="waarom">
-    <div class="container">
-        <p class="section-label">Waarom TravElly</p>
-        <h2 class="section-title">Waarom ouders voor TravElly kiezen</h2>
-        <p class="waarom-intro">Gericht op kinderplezier in een veilige omgeving. TravElly is bewust ontworpen als een plek waar kinderen onbezorgd hun vakantie vastleggen. Zonder afleiding, zonder druk. Alleen plezier en herinneringen maken.</p>
-        <div class="waarom-grid">
-            <div class="waarom-item">
-                <span class="waarom-icon">🔒</span>
-                <p>Alleen jouw kind ziet het. Geen social media, geen volgers.</p>
-            </div>
-            <div class="waarom-item">
-                <span class="waarom-icon">👍</span>
-                <p>Geen likes of reacties. Je kind schrijft voor zichzelf, niet voor een publiek.</p>
-            </div>
-            <div class="waarom-item">
-                <span class="waarom-icon">📱</span>
-                <p>Geen account nodig. Installeren en beginnen.</p>
-            </div>
-            <div class="waarom-item">
-                <span class="waarom-icon">🛡️</span>
-                <p>Alles blijft op het eigen toestel. Geen cloud, geen tracking.</p>
-            </div>
-            <div class="waarom-item">
-                <span class="waarom-icon">🎨</span>
-                <p>Kinderen leggen hun vakantie zelf vast met foto's en verhalen</p>
-            </div>
-            <div class="waarom-item">
-                <span class="waarom-icon">👨‍👩‍👧‍👦</span>
-                <p>Deel de reis met het hele gezin via WhatsApp of AirDrop</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FEATURES -->
-<section class="features" id="functies">
-    <div class="container">
-        <p class="section-label">Wat zit erin</p>
-        <h2 class="section-title">Alles wat een jong reiziger nodig heeft</h2>
-
-        <div class="feature-grid">
-            <div class="feature-card">
-                <div class="feature-emoji">📸</div>
-                <h3>Foto's per dag</h3>
-                <p>Kies de mooiste foto's van de dag en voeg ze toe aan het dagboek. Zo bouw je een persoonlijk fotoalbum op van de hele reis.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-emoji">📝</div>
-                <h3>Schrijven en vertellen</h3>
-                <p>Wat was het leukste vandaag? Kinderen schrijven in hun eigen woorden over hun belevenissen, van stranddag tot stadsavontuur.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-emoji">🏨</div>
-                <h3>Sfeervolle illustraties</h3>
-                <p>Kies een eigen foto of een sfeervolle illustratie voor je verblijfplaats: strand, hotel, camping en meer.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-emoji">🌙</div>
-                <h3>Donkere modus</h3>
-                <p>TravElly schakelt automatisch mee met de donkere modus van je iPhone. Rustig voor de ogen, prettig bij minder fel licht.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- DOELGROEP -->
-<section class="doelgroep" id="doelgroep">
-    <div class="container">
-        <p class="section-label">Doelgroep</p>
-        <h2 class="section-title">Gemaakt voor kids met input van kids</h2>
-        <p class="doelgroep-text" style="font-weight: 600; color: var(--green-mid);">Een app waarin ouders en kinderen samenwerken.</p>
-        <p class="doelgroep-text">TravElly is ontworpen voor kinderen van 6 tot 14 jaar. Ouders kunnen de reis aanmaken en zo hun kinderen een beeld geven van de vakantie. Kinderen vullen vervolgens zelf hun dagboek met foto's en verhalen.</p>
-        <p class="doelgroep-text">De app kan op de telefoon van een ouder worden geïnstalleerd, zodat kinderen deze samen of onder begeleiding kunnen gebruiken. Dit past goed bij gezinnen die kiezen voor beperkt of gecontroleerd smartphonegebruik. Natuurlijk kan TravElly ook rechtstreeks op de telefoon van je kind worden gezet. Welke aanpak het beste past, bepaal je als ouder zelf.</p>
     </div>
 </section>
 
@@ -680,11 +579,11 @@
     <div class="container">
         <p class="section-label">Privacy</p>
         <h2 class="section-title">Jouw reis, jouw gegevens</h2>
-        <p class="privacy-text">TravElly respecteert je privacy volledig. Er is geen account nodig, er draait geen analytics en er staat geen reclame in de app.</p>
+        <p class="privacy-text">Voor ouders die hun kind niet in een sociale app willen hebben is dit geen bijzaak. TravElly heeft geen account, geen server, geen advertenties en geen sociale feed.</p>
         <div class="privacy-points">
             <div class="privacy-point">
                 <span class="privacy-check">✓</span>
-                <p>Alle gegevens blijven op jouw apparaat</p>
+                <p>Alle gegevens blijven op jouw apparaat. Er is geen cloud en geen server</p>
             </div>
             <div class="privacy-point">
                 <span class="privacy-check">✓</span>
@@ -692,7 +591,11 @@
             </div>
             <div class="privacy-point">
                 <span class="privacy-check">✓</span>
-                <p>Er is geen account nodig en er wordt niets opgeslagen in de cloud</p>
+                <p>Er is geen account nodig. Installeren en beginnen</p>
+            </div>
+            <div class="privacy-point">
+                <span class="privacy-check">✓</span>
+                <p>Geen sociale feed, geen volgers en geen likes. Je kind schrijft voor zichzelf, niet voor een publiek</p>
             </div>
             <div class="privacy-point">
                 <span class="privacy-check">✓</span>
@@ -703,6 +606,17 @@
                 <p>TravElly bevat geen advertenties en geen tracking</p>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- DOELGROEP -->
+<section class="doelgroep" id="doelgroep">
+    <div class="container">
+        <p class="section-label">Doelgroep</p>
+        <h2 class="section-title">Gemaakt voor kinderen, gebruikt door het hele gezin</h2>
+        <p class="doelgroep-text" style="font-weight: 600; color: var(--green-mid);">Een app waarin ouders en kinderen aan dezelfde reis werken.</p>
+        <p class="doelgroep-text">TravElly is gebouwd voor kinderen van 6 tot 14 jaar en is voor die leeftijd zelfstandig te gebruiken. Ouders zetten de reis op, kinderen plannen mee en houden onderweg hun dagboek bij. Iedereen kijkt naar hetzelfde reisplan.</p>
+        <p class="doelgroep-text">De app kan op de telefoon van een ouder worden geïnstalleerd, zodat kinderen deze samen of onder begeleiding gebruiken. Dit past goed bij gezinnen die kiezen voor beperkt of gecontroleerd smartphonegebruik. TravElly kan natuurlijk ook rechtstreeks op de telefoon van je kind. Welke aanpak past, bepaal je als ouder zelf.</p>
     </div>
 </section>
 
@@ -723,11 +637,15 @@
         <div class="faq-list">
             <div class="faq-item">
                 <h3>Voor welke leeftijd is TravElly?</h3>
-                <p>TravElly is gemaakt voor kinderen van 6 tot 14 jaar. Jong genoeg om het leuk te vinden, oud genoeg om zelf te schrijven en foto's te kiezen. Jongere kinderen kunnen het prima samen met een ouder gebruiken.</p>
+                <p>TravElly is gemaakt voor kinderen van 6 tot 14 jaar. Jong genoeg om het leuk te vinden, oud genoeg om zelf activiteiten op te zoeken en te schrijven. Jongere kinderen kunnen het prima samen met een ouder gebruiken.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Kan mijn kind zelf activiteiten toevoegen?</h3>
+                <p>Ja. Je kind ziet de bestemmingen van de reis en zet daar zelf activiteiten bij. Zo plant het mee en weet het voor vertrek al wat er te doen is.</p>
             </div>
             <div class="faq-item">
                 <h3>Werkt de app zonder internet?</h3>
-                <p>Ja. Alles werkt offline, perfect voor de vakantie. Alleen als je een ansichtkaart wilt delen heb je even verbinding nodig.</p>
+                <p>Ja. Alles werkt offline, perfect voor de vakantie. Alleen als je een ansichtkaart of de reis wilt delen heb je even verbinding nodig.</p>
             </div>
             <div class="faq-item">
                 <h3>Kost het iets?</h3>
@@ -735,15 +653,15 @@
             </div>
             <div class="faq-item">
                 <h3>Kan ik de reis delen met mijn gezin?</h3>
-                <p>Ja! Zodra je de reis hebt aangemaakt, deel je hem via WhatsApp, AirDrop of iMessage. Iedereen met een iPhone en TravElly ontvangt dezelfde reis en kan zijn eigen dagboek bijhouden.</p>
+                <p>Ja. Zodra je de reis hebt aangemaakt, deel je hem via WhatsApp, AirDrop of iMessage. Iedereen met een iPhone en TravElly ontvangt dezelfde reis en kan zijn eigen dagboek bijhouden.</p>
             </div>
             <div class="faq-item">
                 <h3>Kan ik meerdere reizen bijhouden?</h3>
-                <p>Ja, je kunt meerdere reizen aanmaken. Elk avontuur krijgt zijn eigen dagboek.</p>
+                <p>Ja, je kunt meerdere reizen aanmaken. Elke reis krijgt een eigen overzicht en een eigen dagboek.</p>
             </div>
             <div class="faq-item">
                 <h3>Moet mijn kind een eigen telefoon hebben?</h3>
-                <p>Nee. De app kan op de telefoon van een ouder worden geïnstalleerd, zodat kinderen deze samen of onder begeleiding kunnen gebruiken. Natuurlijk kan TravElly ook rechtstreeks op de telefoon van je kind worden gezet.</p>
+                <p>Nee. De app kan op de telefoon van een ouder worden geïnstalleerd, zodat kinderen deze samen of onder begeleiding gebruiken. TravElly kan natuurlijk ook rechtstreeks op de telefoon van je kind.</p>
             </div>
             <div class="faq-item">
                 <h3>Is er een Android-versie?</h3>
@@ -756,8 +674,8 @@
 <!-- BOTTOM CTA -->
 <section class="bottom-cta" id="download">
     <div class="container">
-        <h2 class="section-title">Klaar voor het volgende avontuur?</h2>
-        <p class="bottom-cta-sub">Download TravElly gratis en begin met de voorbereiding van jullie reis.</p>
+        <h2 class="section-title">Klaar voor de volgende reis?</h2>
+        <p class="bottom-cta-sub">Download TravElly gratis en zet jullie volgende reis samen op.</p>
         <a href="https://apps.apple.com/app/travelly/id6760542416" class="bottom-cta-link">
             <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/nl-nl?size=250x83" alt="Download in de App Store">
         </a>
