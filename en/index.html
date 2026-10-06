@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TravElly | Family travel app: your kid plans along | Free on the App Store</title>
-    <meta name="description" content="TravElly is the travel app your kid helps plan. A trip overview, activities kids find and add themselves, and a travel diary for kids ages 6 to 14. Offline, no account, free.">
+    <title>TravElly | Family travel app: your kid plans along | Free for iPhone</title>
+    <meta name="description" content="TravElly is the iPhone app where your kid helps plan the trip: a trip overview, activities they pick themselves and a travel diary of their own. For kids ages 6 to 14. Free, no account, no ads.">
     <meta name="keywords" content="kids trip planner app, family travel app, plan a trip with kids, trip overview for kids, travel diary for kids, vacation journal kids, kids travel journal">
     <link rel="canonical" href="https://mijn-travelly.nl/en/">
 
@@ -235,7 +235,8 @@
             margin-top: 32px;
         }
         .pijler-shots img {
-            width: 200px;
+            width: 250px;
+            max-width: 80vw;
             border-radius: 20px;
             box-shadow: 0 8px 32px rgba(26, 46, 26, 0.12);
         }
@@ -287,6 +288,30 @@
             color: var(--text-light);
             font-size: 0.95rem;
             line-height: 1.7;
+        }
+
+        /* ---- MADE THIS WAY ON PURPOSE ---- */
+        .bewust {
+            background: var(--white);
+        }
+        .bewust-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            max-width: 640px;
+            margin-bottom: 32px;
+        }
+        .bewust-slot {
+            margin-top: 32px;
+            margin-bottom: 0;
+            font-weight: 600;
+            color: var(--green-mid);
+        }
+        .bewust .privacy-check {
+            color: var(--green-mid);
+        }
+        .bewust .privacy-point p {
+            color: var(--text);
         }
 
         /* ---- AUDIENCE ---- */
@@ -470,7 +495,7 @@
             .hero-shot img { width: 190px; }
             .phase { grid-template-columns: 1fr; }
             .phase-icon { margin-bottom: -12px; }
-            .pijler-shots img { width: 160px; }
+            .pijler-shots img { width: 240px; }
             .pijler-shots video { width: 190px; }
             .nav-right { gap: 10px; }
             .nav-cta { padding: 8px 14px; font-size: 0.8rem; }
@@ -485,7 +510,7 @@
         "name": "TravElly",
         "operatingSystem": "iOS",
         "applicationCategory": "TravelApplication",
-        "description": "TravElly is a travel app for families with kids ages 6 to 14. Kids see the trip overview with destinations and dates, find and add activities themselves, and keep a travel diary with photos and stories along the way. Works offline, no account.",
+        "description": "TravElly is an iPhone app for families with kids ages 6 to 14. Kids see the trip overview with destinations and dates, pick activities themselves, and keep a travel diary with photos and stories along the way. Works offline, no account, no ads.",
         "inLanguage": "en",
         "audience": {
             "@type": "PeopleAudience",
@@ -525,11 +550,11 @@
     <div class="container">
         <p class="hero-label">The travel app for the whole family</p>
         <h1>One trip plan that travels with you, from counting down to looking back.</h1>
-        <p class="hero-sub">For families with kids ages 6 to 14. Parents set up the trip and share it with the family, kids plan activities themselves and keep a photo diary along the way. Works offline, no account.</p>
+        <p class="hero-sub">For families with kids ages 6 to 14. You set up the trip, your child plans along and keeps a diary of their own. For iPhone, offline, no account.</p>
         <a href="https://apps.apple.com/app/travelly/id6760542416" class="hero-cta">
             <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download TravElly on the App Store">
         </a>
-        <p class="hero-note">Free · No ads · No tracking</p>
+        <p class="hero-note">Free · No ads · No tracking · For iPhone</p>
         <div class="hero-shot">
             <img src="https://mijn-travelly.nl/en-trip-overview.jpg" alt="The trip overview in TravElly: the Japan trip with destinations, day numbers and dates" fetchpriority="high">
         </div>
@@ -539,7 +564,8 @@
 <!-- INTRO TEXT BLOCK -->
 <section class="seo-intro">
     <div class="container">
-        <p class="seo-text">TravElly turns your child from a passenger into a co-planner. Look at the trip together, let them find and add activities themselves, collect photos and stories along the way, and come home with a record they made. No account, no ads, no server.</p>
+        <p class="seo-text">"Are we there yet?" usually comes from a kid in the back seat who has no idea where the trip is going. TravElly turns that around.</p>
+        <p class="seo-text">Look at the trip together, let your child find things to do and add them to the plan, collect photos and stories along the way, and come home with a record they made themselves. They didn't just go on the trip. They helped make it. No account, no ads, no server.</p>
     </div>
 </section>
 
@@ -549,7 +575,7 @@
         <p class="section-label">Overview</p>
         <h2 class="section-title">The trip at a glance: destinations, dates, and route</h2>
         <p class="pijler-text">TravElly lays out the whole trip: where you're going, in what order, on which dates, and how long you'll stay. The trip becomes concrete before it begins.</p>
-        <p class="pijler-text">For your child, the overview answers the question where are we going. For you and your partner, it's the shared trip plan, on everyone's own phone.</p>
+        <p class="pijler-text">For your child, the overview answers the question "where are we actually going?". For you and your partner, it's the shared trip plan, on everyone's own iPhone.</p>
         <div class="pijler-shots">
             <video controls playsinline preload="none" poster="https://mijn-travelly.nl/preview-en-poster.jpg" aria-label="Short video of TravElly in dark mode: the trip overview of a Japan trip, Ideas for here on a day in Osaka, and sharing a postcard">
                 <source src="https://mijn-travelly.nl/preview-en.mp4" type="video/mp4">
@@ -563,13 +589,14 @@
     <div class="container">
         <p class="section-label">Planning along</p>
         <h2 class="section-title">Your kid plans along: finding and adding activities</h2>
-        <p class="pijler-text">The trip overview shows your child where the trip is headed. From there, they can look up what they want to do at each stop. A cave, a special shop or a waterfall. Whatever they find, they add to the plan for the day.</p>
-        <p class="pijler-text">A passenger becomes a co-planner. Your child helps shape the trip instead of just going along with it, and the anticipation starts weeks before departure.</p>
-        <p class="pijler-text">Since version 2.1 the app helps with that. Every destination has an Ideas for here button: real places from Apple Maps nearby, from the zoo to the famous tower or a walk. Your child taps what looks fun, and it lands in the plan for the day.</p>
-        <p class="pijler-text">On an iPhone with Apple Intelligence, TravElly goes a step further. The iPhone itself puts the destination's best-known places at the top, from Universal Studios to the aquarium with the whale shark, and writes a short sentence for each place in your child's language. All of it happens on the device: nothing goes to the internet, and nothing goes to an AI service. That is how TravElly brings Apple Intelligence to your child's trip planning: on the device, in your child's language, and without any AI service on the internet.</p>
+        <p class="pijler-text">Kids are happy to help plan a trip, as long as they know where it's going. In TravElly your child sees every destination and can look up what they want to do there. A cave, a special shop, a waterfall. Whatever they find goes into the plan for the day.</p>
+        <p class="pijler-text">A passenger becomes a co-planner. Your child doesn't just go along with the trip, they help fill it in. And the anticipation starts weeks before departure.</p>
+        <p class="pijler-text">Not sure where to start? Every destination has an Ideas for here button: real places from Apple Maps nearby, from the zoo to the famous tower or a good walk. Tap a place to see where it is, when it's open and how to get there. One tap on the plus and it's in the plan for the day.</p>
+        <p class="pijler-text">On an iPhone with Apple Intelligence, TravElly does even more. The iPhone then puts the destination's best-known places at the top, from Universal Studios to the aquarium with the whale shark, and writes a short sentence for each one, written for kids. All of it happens on the phone itself, in your child's language. Nothing goes to an AI service on the internet.</p>
         <div class="pijler-shots">
-            <img src="https://mijn-travelly.nl/en-plan-for-the-day.jpg" alt="The plan for the day in TravElly for a day in Osaka, with the Ideas for here button" loading="lazy">
-            <img src="https://mijn-travelly.nl/en-ideas-for-here.jpg" alt="Ideas for here in TravElly: real places from Apple Maps around Osaka, such as Universal Studios Japan, Kaiyukan and Osaka Castle, each with a short sentence" loading="lazy">
+            <img src="https://mijn-travelly.nl/en-store-plan.jpg" alt="Your kid plans the day along. The plan for the day in TravElly for a day in Osaka, with the Ideas for here button" loading="lazy">
+            <img src="https://mijn-travelly.nl/en-store-ideas.jpg" alt="Ideas for every destination, with Apple Intelligence. Real places from Apple Maps around Osaka, such as Universal Studios Japan and Kaiyukan, each with a short sentence" loading="lazy">
+            <img src="https://mijn-travelly.nl/en-store-place-card.jpg" alt="Where is it, and when is it open? Apple's place card for the Kaiyukan aquarium with opening hours and directions" loading="lazy">
         </div>
     </div>
 </section>
@@ -579,11 +606,12 @@
     <div class="container">
         <p class="section-label">Capturing</p>
         <h2 class="section-title">On the road: photos, diary, and sharing</h2>
-        <p class="pijler-text">During the trip, your child records what they experience. TravElly includes a travel diary for kids ages 6 to 14: picking the photos of the day and writing down what happened in their own words.</p>
-        <p class="pijler-text">One tap turns a diary page into a digital postcard. Send it via WhatsApp, iMessage, or email to grandparents or friends. Sharing goes directly to people you choose, not to a platform.</p>
+        <p class="pijler-text">On the road, TravElly is a travel diary for kids. Your child picks the photos of the day and writes down what happened in their own words. Stuck on how to start? Every day there's a different question waiting, like "Which photo would you send to grandma or grandpa?"</p>
+        <p class="pijler-text">One tap turns a diary page into a digital postcard. Send it via WhatsApp, iMessage or email to grandparents or friends: straight to people you choose, not to a platform.</p>
+        <p class="pijler-text">And the diary stays. A few years from now, your child can read back what it was like to be nine in Japan.</p>
         <div class="pijler-shots">
-            <img src="https://mijn-travelly.nl/en-diary.jpg" alt="The travel diary in TravElly: plan for the day, diary text and photos for a day at the beach house" loading="lazy">
-            <img src="https://mijn-travelly.nl/en-postcard.jpg" alt="Sharing a vacation day as a postcard from TravElly" loading="lazy">
+            <img src="https://mijn-travelly.nl/en-store-diary.jpg" alt="Capture the day as it happens. The travel diary in TravElly with photos of the day and diary text" loading="lazy">
+            <img src="https://mijn-travelly.nl/en-store-postcard.jpg" alt="Share the day as a postcard. A vacation day as a postcard with beach photos and diary text" loading="lazy">
         </div>
     </div>
 </section>
@@ -628,6 +656,38 @@
     </div>
 </section>
 
+<!-- MADE THIS WAY ON PURPOSE -->
+<section class="bewust" id="on-purpose">
+    <div class="container">
+        <p class="section-label">Made this way on purpose</p>
+        <h2 class="section-title">An app that doesn't try to hold on to your child</h2>
+        <p class="bewust-text">Many apps for kids are built to stay open as long as possible. Points you lose if you skip a day, rewards that pull you further in, notifications telling you you're missing out. TravElly deliberately leaves all of that out. The app is about the trip, not the screen.</p>
+        <div class="privacy-points">
+            <div class="privacy-point">
+                <span class="privacy-check">✓</span>
+                <p>No points, badges or streaks. Your child writes because they have something to tell, not to keep a streak alive.</p>
+            </div>
+            <div class="privacy-point">
+                <span class="privacy-check">✓</span>
+                <p>No notifications. TravElly never sends a push message. Your child opens the app when they want to do something.</p>
+            </div>
+            <div class="privacy-point">
+                <span class="privacy-check">✓</span>
+                <p>No ads. Nothing in TravElly tries to sell your child anything.</p>
+            </div>
+            <div class="privacy-point">
+                <span class="privacy-check">✓</span>
+                <p>No likes, followers or feed. Your kid writes for themselves, not for an audience.</p>
+            </div>
+            <div class="privacy-point">
+                <span class="privacy-check">✓</span>
+                <p>No endless scrolling. The app has a beginning and an end, just like the trip.</p>
+            </div>
+        </div>
+        <p class="bewust-text bewust-slot">Once the day is in the diary, the app is done. Then it's back to the vacation itself.</p>
+    </div>
+</section>
+
 <!-- PRIVACY -->
 <section class="privacy" id="privacy">
     <div class="container">
@@ -649,10 +709,6 @@
             </div>
             <div class="privacy-point">
                 <span class="privacy-check">✓</span>
-                <p>No social feed, no followers, no likes. Your kid writes for themselves, not for an audience.</p>
-            </div>
-            <div class="privacy-point">
-                <span class="privacy-check">✓</span>
                 <p>No live following. TravElly doesn't broadcast your location. The home front knows the trip through the shared trip plan and the postcards you choose to send.</p>
             </div>
             <div class="privacy-point">
@@ -668,6 +724,9 @@
                 <p>TravElly contains no ads and no tracking.</p>
             </div>
         </div>
+        <div class="pijler-shots">
+            <img src="https://mijn-travelly.nl/en-store-privacy.jpg" alt="No account, no server, no tracking. The privacy points from About this app in TravElly" loading="lazy">
+        </div>
         <p class="privacy-conclusie">No server means no data breach. Dutch news outlet NOS reported on travel app Polarsteps, where an unsecured connection left the data of 23 million users open to view, including locations, photos and trips that were set to private. TravElly has no server and no user database. What is never collected cannot leak.</p>
         <p class="privacy-footnote">Source: <a href="https://nos.nl/artikel/2629622-datalek-bij-reisapp-polarsteps-iedereen-kon-meekijken-ook-met-afgeschermde-reizen" target="_blank" rel="noopener">NOS on the Polarsteps data breach</a> (Dutch). Read our full <a href="https://mijn-travelly.nl/en/privacy/">privacy policy</a>.</p>
     </div>
@@ -679,7 +738,7 @@
         <p class="section-label">Who it's for</p>
         <h2 class="section-title">Made for kids, used by the whole family</h2>
         <p class="doelgroep-text" style="font-weight: 600; color: var(--green-mid);">An app where parents and kids work on the same trip.</p>
-        <p class="doelgroep-text">TravElly is built for kids ages 6 to 14 and works for that age on its own. Parents set up the trip, kids plan along and keep their diary on the road. Everyone looks at the same trip plan.</p>
+        <p class="doelgroep-text">TravElly is built for kids ages 6 to 14. From around eight, most kids use it on their own; younger kids use it together with a parent. Parents set up the trip, kids plan along and keep their diary on the road. Everyone looks at the same trip plan.</p>
         <p class="doelgroep-text">The app can live on a parent's phone, so kids use it together or with supervision. That fits families who prefer limited or controlled smartphone use. You can also install TravElly directly on your child's phone. You decide what works for your family.</p>
     </div>
 </section>
@@ -700,7 +759,7 @@
         <h2 class="section-title">Comfortable for everyone</h2>
         <p class="toegankelijkheid-text">TravElly follows your iPhone's dark mode setting automatically. The calm, dark color scheme reduces visual strain. People with light sensitivity or an acquired brain injury may especially benefit from it, as does anyone who prefers softer light.</p>
         <div class="pijler-shots">
-            <img src="https://mijn-travelly.nl/en-dark-mode.jpg" alt="TravElly in dark mode: the trips list with a calm, dark color scheme" loading="lazy">
+            <img src="https://mijn-travelly.nl/en-store-dark.jpg" alt="Easy on the eyes in dark mode. The TravElly trips list in a calm, dark color scheme" loading="lazy">
         </div>
     </div>
 </section>
@@ -713,7 +772,7 @@
         <div class="faq-list">
             <div class="faq-item">
                 <h3>What age group is TravElly for?</h3>
-                <p>TravElly is made for kids ages 6 to 14. Young enough to find it fun, old enough to look up activities and write on their own. Younger kids can use it together with a parent.</p>
+                <p>TravElly is made for kids ages 6 to 14. From around eight, most kids look up activities and write in their diary on their own. Younger kids use it together with a parent.</p>
             </div>
             <div class="faq-item">
                 <h3>Can my child add activities themselves?</h3>
@@ -725,11 +784,11 @@
             </div>
             <div class="faq-item">
                 <h3>Does TravElly use artificial intelligence?</h3>
-                <p>Yes, and only on the device itself. On an iPhone with Apple Intelligence (iPhone 15 Pro and newer, iOS 26 or later), the phone finds the best-known places near a destination and writes a short sentence for each place in Ideas for here. Nothing goes to an AI service on the internet, not to ChatGPT either. Without Apple Intelligence the button still works, with the places from Apple Maps but without those sentences.</p>
+                <p>Yes, but only on the phone itself. On an iPhone with Apple Intelligence (iPhone 15 Pro and newer, iOS 26 or later), the phone finds the best-known places near a destination and writes a short sentence for each place in Ideas for here. Nothing goes to an AI service on the internet, not to ChatGPT either. Without Apple Intelligence the button still works: you get the places from Apple Maps, without those sentences.</p>
             </div>
             <div class="faq-item">
                 <h3>Does it cost anything?</h3>
-                <p>No. TravElly is a free download on the App Store. No subscription, no in-app purchases.</p>
+                <p>No. TravElly is free, with no subscription and no ads.</p>
             </div>
             <div class="faq-item">
                 <h3>Can I share the trip with my family?</h3>
@@ -748,8 +807,8 @@
                 <p>No. The app can live on a parent's phone, so kids use it together or with supervision. Or install TravElly directly on your child's phone, whichever fits your family.</p>
             </div>
             <div class="faq-item">
-                <h3>Is there an Android version?</h3>
-                <p>Not right now. TravElly is only available for iPhone. An Android version is on the wishlist.</p>
+                <h3>Which phones does TravElly work on?</h3>
+                <p>TravElly is an iPhone app and runs on any iPhone with iOS 18.6 or later. It's at its best on an iPhone with Apple Intelligence (iPhone 15 Pro and newer, iOS 26 or later), where Ideas for here gets smarter. There is no Android version yet; it's on the wishlist.</p>
             </div>
         </div>
     </div>
@@ -758,8 +817,8 @@
 <!-- BOTTOM CTA -->
 <section class="bottom-cta" id="download">
     <div class="container">
-        <h2 class="section-title">Ready for the next trip?</h2>
-        <p class="bottom-cta-sub">Download TravElly for free and set up your next trip together.</p>
+        <h2 class="section-title">Where are you headed?</h2>
+        <p class="bottom-cta-sub">Set up the trip, share it with your child and let them plan along. TravElly is free for iPhone.</p>
         <a href="https://apps.apple.com/app/travelly/id6760542416" class="bottom-cta-link">
             <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store">
         </a>
